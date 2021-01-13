@@ -135,6 +135,11 @@ export default {
           icon: 'mdi-account',
           title: 'Temp Account',
           to: '/temp'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'About',
+          to: '/about'
         }
       ],
       miniVariant: false,
