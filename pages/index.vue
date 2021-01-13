@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" align="center" class="pa-8">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
         <logo />
