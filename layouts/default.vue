@@ -22,7 +22,20 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+        
       </v-list>
+      <template v-slot:append>
+        <div class="pa-2">
+      <v-switch
+        v-model="$vuetify.theme.dark"
+        label="Dark Mode"
+        class="pl-4"
+      ></v-switch>
+          <v-btn block>
+            Logout
+          </v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
@@ -36,12 +49,12 @@
       >
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
-      <v-btn
+      <!-- <v-btn
         icon
         @click.stop="clipped = !clipped"
       >
         <v-icon>mdi-application</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-btn
         icon
         @click.stop="fixed = !fixed"
@@ -49,20 +62,22 @@
         <v-icon>mdi-minus</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title" />
-      <v-spacer />
+      <!-- <v-spacer />
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer
+    <v-spacer/>
+      <!-- {{ this.$fire.currentUser }} -->
+    <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
       temporary
@@ -78,7 +93,7 @@
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-footer
       :absolute="!fixed"
       app
@@ -92,7 +107,7 @@
 export default {
   data () {
     return {
-      clipped: false,
+      clipped: true,
       drawer: false,
       fixed: false,
       items: [
@@ -108,14 +123,24 @@ export default {
         },
         {
           icon: 'mdi-account',
-          title: 'Signup',
+          title: 'Sign in',
+          to: '/signin'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'Sign up',
           to: '/signup'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'Temp Account',
+          to: '/temp'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Vuetify.js HTN Template'
     }
   }
 }
