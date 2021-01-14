@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/essential",
+    "plugin:import/errors"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["vue", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-unused-vars": "warn",
+    "vue/no-unused-components": "warn",
+    "no-useless-catch": "warn",
+    "no-dupe-keys": "error",
+    "no-useless-escape": "warn",
+    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    "import/named": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./"],
+          ["~", "./"]
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
+      }
+    },
+    "import/extensions": [".js", ".vue"]
+  }
+}
