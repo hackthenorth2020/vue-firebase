@@ -1,19 +1,18 @@
 <template>
   <div>
-    <SignUp/>
+    <SignUp />
   </div>
 </template>
 
 <script>
-import SignUp from '../components/SignUp'
+import SignUp from "../components/signup";
 
 export default {
-  data: () => ({
-  }),
-    components: {
-      SignUp
-    },
-}
+  data: () => ({}),
+  components: {
+    SignUp,
+  },
+};
 </script>
 
 <style></style>
