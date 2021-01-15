@@ -116,15 +116,19 @@ export default {
           to: "/signup",
         },
         {
-          icon: "mdi-account",
-          title: "Temp Account",
-          to: "/temp",
-        },
-        {
           icon: "mdi-airplane-landing",
           title: "Landing Page",
           to: "/landingpage",
         },
+          icon: 'mdi-account',
+          title: 'Temp Account',
+          to: '/temp'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'About',
+          to: '/about'
+        }
       ],
       miniVariant: false,
       right: true,
