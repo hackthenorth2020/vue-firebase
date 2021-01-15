@@ -22,32 +22,22 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
-        
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-      <v-switch
-        v-model="$vuetify.theme.dark"
-        label="Dark Mode"
-        class="pl-4"
-      ></v-switch>
-          <v-btn block>
-            Logout
-          </v-btn>
+          <v-switch
+            v-model="$vuetify.theme.dark"
+            label="Dark Mode"
+            class="pl-4"
+          ></v-switch>
+          <v-btn block> Logout </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
+    <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+      <v-btn icon @click.stop="miniVariant = !miniVariant">
+        <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
       </v-btn>
       <!-- <v-btn
         icon
@@ -55,10 +45,7 @@
       >
         <v-icon>mdi-application</v-icon>
       </v-btn> -->
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
+      <v-btn icon @click.stop="fixed = !fixed">
         <v-icon>mdi-minus</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title" />
@@ -71,12 +58,12 @@
       </v-btn> -->
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
-    <v-spacer/>
-      <!-- {{ this.$fire.currentUser }} -->
+    <v-spacer />
+    <!-- {{ this.$fire.currentUser }} -->
     <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
@@ -94,10 +81,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer> -->
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
+    <v-footer :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -105,33 +89,37 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       clipped: true,
       drawer: false,
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: "mdi-apps",
+          title: "Welcome",
+          to: "/",
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: "mdi-chart-bubble",
+          title: "Inspire",
+          to: "/inspire",
         },
         {
-          icon: 'mdi-account',
-          title: 'Sign in',
-          to: '/signin'
+          icon: "mdi-account",
+          title: "Sign in",
+          to: "/signin",
         },
         {
-          icon: 'mdi-account',
-          title: 'Sign up',
-          to: '/signup'
+          icon: "mdi-account",
+          title: "Sign up",
+          to: "/signup",
         },
         {
+          icon: "mdi-airplane-landing",
+          title: "Landing Page",
+          to: "/landingpage",
+        },
           icon: 'mdi-account',
           title: 'Temp Account',
           to: '/temp'
@@ -145,8 +133,8 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js HTN Template'
-    }
-  }
-}
+      title: "Vuetify.js HTN Template",
+    };
+  },
+};
 </script>
