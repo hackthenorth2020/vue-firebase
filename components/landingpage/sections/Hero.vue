@@ -30,11 +30,14 @@
             "
             class="d-flex flex-wrap"
           >
-            <base-btn> Discover More </base-btn>
+            <v-btn to="/SignIn" large color="blue" icon="mdi-login">Login</v-btn>
+
+            
 
             <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
 
-            <base-btn :ripple="false" class="pa-1" height="auto" text>
+<v-btn to="/signup" large color="green" icon="mdi-logout" class="pa-1" height="auto">Logout</v-btn>
+            <:ripple="false" class="pa-1" height="auto" text>
               Get Started Now
             </base-btn>
           </div>

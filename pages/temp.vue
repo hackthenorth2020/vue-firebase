@@ -21,8 +21,8 @@ import { mapActions } from "vuex";
 
 export default {
   data: () => ({
-    username: "",
-    password: "",
+    username: "foo@foo.foo",
+    password: "test123",
     token: "",
   }),
   methods: {
