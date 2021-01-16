@@ -1,23 +1,21 @@
 <template>
   <div>
-    <v-bt>Get all items</v-bt>
-    <v-card class="counter">
-      {{ itemCounter }}
-    </v-card>
+    <v-btn @click="getItems">Get all items</v-btn>
+    <v-flex v-for="item in getAllItems" :key="item.id">
+      <v-card class="ma-4"> {{ item.name }} : {{ item.id }} </v-card>
+    </v-flex>
   </div>
 </template>
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "Items",
   computed: {
-    itemCounter() {
-      return this.$store.getters.getItems;
-    },
-    methods: {
-      updateItem() {
-        return this.$store.dispatch.updateItem;
-      },
-    },
+    ...mapGetters(["getAllItems"]),
+  },
+  methods: {
+    ...mapActions(["getItems"]),
   },
 };
 </script>

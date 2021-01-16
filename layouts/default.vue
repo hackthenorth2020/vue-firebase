@@ -130,6 +130,11 @@ export default {
           title: "About",
           to: "/about",
         },
+        {
+          icon: "mdi-account",
+          title: "Items",
+          to: "/items",
+        },
       ],
       miniVariant: false,
       right: true,

@@ -97,7 +97,7 @@ const actions = {
 
 const getters = {
   // getPosts() () => {this.posts}
-  getItems: (state) => state.items,
+  getAllItems: (state) => state.items,
 };
 
 const mutations = {
