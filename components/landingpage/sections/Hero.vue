@@ -2,9 +2,9 @@
   <section id="hero">
     <v-img
       :min-height="minHeight"
-      :src="require('@/assets/hero-2.jpg')"
+      src="https://miro.medium.com/max/2756/1*L30BHpyUmdluxpzanwujiw.png"
       class="white--text"
-      gradient="to right, rgba(5, 11, 31, .8), rgba(5, 11, 31, .8)"
+      gradient="to right, rgba(43, 11, 101, .8), rgba(5, 110, 111, .8)"
     >
       <v-container class="fill-height px-4 py-12">
         <v-responsive
@@ -13,13 +13,10 @@
           max-width="700"
           width="100%"
         >
-          <base-heading title="CALL TO ACTION" />
+          <base-heading title="mntr" />
 
           <base-body>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-            tempora odio neque. Magni suscipit nam, maiores incidunt cumque ad.
-            Similique quia eligendi consectetur fugiat labore veritatis nobis
-            quisquam! Nulla, velit.
+          Redefining mentorship through an inclusive peer-to-peer collaborative platform
           </base-body>
 
           <div
@@ -31,7 +28,7 @@
             class="d-flex flex-wrap"
           >
             <v-btn to="/SignIn" large color="blue" icon="mdi-login"
-              >Login</v-btn
+              >Sign In</v-btn
             >
 
             <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
@@ -43,7 +40,7 @@
               icon="mdi-logout"
               class="pa-1"
               height="auto"
-              >Logout</v-btn
+              >Sign Out</v-btn
             >
             <!--<:ripple="false" class="pa-1" height="auto" text>
               Get Started Now

@@ -2,20 +2,17 @@
   <v-theme-provider :dark="dark">
     <div>
       <base-img
-        :src="require('@/assets/logo-bw.png')"
+       src="https://miro.medium.com/max/2756/1*L30BHpyUmdluxpzanwujiw.png"
         contain
         max-width="128"
         min-height="78"
         width="100%"
       />
 
-      <base-title size="body-1" space="4" title="BASED SITE" weight="regular" />
+      <base-title size="body-5" space="4" title="Mntr" weight="bold" />
 
       <base-body>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur
-        quidem, quis modi iure nihil commodi suscipit, corporis dicta adipisci,
-        voluptatum quia cupiditate. Nulla minus voluptatum nostrum deleniti,
-        asperiores facere.
+      Learn, Collaborate, Mntr.
       </base-body>
 
       <base-btn class="mb-12" color="white" outlined> More Info </base-btn>

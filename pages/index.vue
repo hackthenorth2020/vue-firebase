@@ -22,7 +22,7 @@ export default {
 
   //   extends: View,
 
-  mixins: [LoadSections(["hero", "app-features", "features", "info"])],
+  mixins: [LoadSections(["hero", "app-features", "info"])],
 
   props: {
     id: {

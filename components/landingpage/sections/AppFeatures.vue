@@ -1,19 +1,16 @@
 <template>
   <base-section id="app-features">
-    <base-section-heading title="FEATURES">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, in!
-      Asperiores, impedit libero. Veniam rerum saepe unde nihil possimus
-      quibusdam esse accusamus mollitia magni fuga.
+    <base-section-heading title="Features">
+    We've implemented optimal Mentee-Mentor pairing to find both fellow mentees and 
+    relevant mentors
     </base-section-heading>
 
     <v-container>
       <v-row>
         <v-col v-for="(feature, i) in features" :key="i" cols="12" md="6">
           <base-avatar-card v-bind="feature" align="left" horizontal>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            illum veniam cum dolores ratione commodi beatae quas maxime,
-            laboriosam excepturi solut!
           </base-avatar-card>
+
         </v-col>
       </v-row>
     </v-container>
@@ -35,32 +32,53 @@ export default {
   data: () => ({
     features: [
       {
-        title: "Pixel Perfect Design",
-        icon: "mdi-fountain-pen-tip",
+        
+        selected: true,
+        color: "primary",
+        dark: true,
+        title: "Peer To Peer",
+        icon: "mdi-handshake",
+        text: "Integrate Peer to Peer mentoring where mentee can meet other mentees with similar interests"
       },
       {
-        title: "Retina Ready",
-        icon: "mdi-cellphone",
+        
+        selected: true,
+        color: "primary",
+        dark: true,
+        title: "Mentor Matching",
+        icon: "mdi-human-queue",
+        text:"Mentees can filter through relevant suggested mentors to find their optimal mentor"
       },
       {
         selected: true,
         color: "primary",
         dark: true,
-        title: "Easily Customizable",
-        icon: "mdi-pencil-box-outline",
+        title: "Statistics",
+        icon: "mdi-monitor-dashboard",
+        text: "Mentors can get detailed feedback on the number of mentees"
       },
+
       {
-        title: "Image Parallax",
-        icon: "mdi-image-size-select-actual",
+        
+        selected: true,
+        color: "primary",
+        dark: true,
+        title: "Collaborative Mentorship",
+        icon: "mdi-human-greeting",
+        text: "Mentees get the chance to mentor one another in group based projects facilitated by a mentor"
       },
+    /*
       {
         title: "Seo Optimized",
         icon: "mdi-ice-pop",
+        text:
       },
       {
         title: "24/7 Support",
         icon: "mdi-help-circle-outline",
+        text:
       },
+      */
     ],
   }),
 };
