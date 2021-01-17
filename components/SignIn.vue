@@ -24,7 +24,14 @@
           outlined
           prepend-inner-icon="mdi-lock-outline"
         />
-        <v-btn primary large block class="px-4, blue--text" outlined  @click="loginUser()">
+        <v-btn
+          primary
+          large
+          block
+          class="px-4, blue--text"
+          outlined
+          @click="loginUser()"
+        >
           Login
         </v-btn>
       </v-form>
@@ -51,17 +58,18 @@ export default {
     };
   },
   methods: {
-    async loginUser() {
-      await this.$fire.auth
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then((user) => {
-          this.$fire.auth.currentUser.getIdToken().then((idToken) => {
-            console.log(idToken);
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    loginUser() {
+      // await this.$fire.auth
+      //   .signInWithEmailAndPassword(this.email, this.password)
+      //   .then((user) => {
+      //     this.$fire.auth.currentUser.getIdToken().then((idToken) => {
+      //       console.log(idToken);
+      //     });
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
+      this.$router.push("/userprofile");
     },
   },
 };
