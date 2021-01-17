@@ -1,10 +1,10 @@
 <template>
   <section id="hero">
-    <v-img
+
+    <base-heading class="black--text"  title="mntr.tech" />
+    <v-img 
       :min-height="minHeight"
-      :src="require('@/assets/hero-2.jpg')"
-      class="white--text"
-      gradient="to right, rgba(5, 11, 31, .8), rgba(5, 11, 31, .8)"
+      src='https://i.pinimg.com/originals/37/b8/11/37b8112791f2529ffe4882412b541c94.gif'
     >
       <v-container class="fill-height px-4 py-12">
         <v-responsive
@@ -13,13 +13,12 @@
           max-width="700"
           width="100%"
         >
-          <base-heading title="CALL TO ACTION" />
-
+        
+        
+      
           <base-body>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-            tempora odio neque. Magni suscipit nam, maiores incidunt cumque ad.
-            Similique quia eligendi consectetur fugiat labore veritatis nobis
-            quisquam! Nulla, velit.
+            Ever wanted to take your skills to the next level? mntr empowers young professionals 
+            through collaborative peer mentorship
           </base-body>
 
           <div
@@ -30,13 +29,14 @@
             "
             class="d-flex flex-wrap"
           >
-            <v-btn to="/SignIn" large color="blue" icon="mdi-login">Login</v-btn>
+          <br><br>
+            <v-btn to="/SignIn" large color="blue" icon="mdi-login" elevation="3">Sign In</v-btn>
+            <v-divider></v-divider>
+            
 
             
 
-            <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
-
-<v-btn to="/signup" large color="green" icon="mdi-logout" class="pa-1" height="auto">Logout</v-btn>
+<v-btn to="/signup" large color="green" icon="mdi-logout" class="pa-1" height="auto">Sign Up Today!</v-btn>
             <!--<:ripple="false" class="pa-1" height="auto" text>
               Get Started Now
             </base-btn>
@@ -73,3 +73,6 @@ export default {
   },
 };
 </script>
+<style>
+
+</style>

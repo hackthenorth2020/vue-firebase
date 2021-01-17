@@ -53,6 +53,7 @@ export default {
     dark: Boolean,
     horizontal: Boolean,
     icon: String,
+    desc: String,
     outlined: {
       type: Boolean,
       default: true,
