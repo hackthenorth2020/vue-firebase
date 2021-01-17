@@ -89,11 +89,6 @@ export default {
           to: "/",
         },
         {
-          icon: "mdi-chart-bubble",
-          title: "Inspire",
-          to: "/inspire",
-        },
-        {
           icon: "mdi-account",
           title: "Sign in",
           to: "/signin",
@@ -102,11 +97,6 @@ export default {
           icon: "mdi-account",
           title: "Sign up",
           to: "/signup",
-        },
-        {
-          icon: "mdi-airplane-landing",
-          title: "Landing Page",
-          to: "/landingpage",
         },
         {
           icon: "mdi-account",
@@ -132,6 +122,11 @@ export default {
           icon: "mdi-account",
           title: "Find Mentor",
           to: "/findmentor",
+        },
+        {
+          icon: "mdi-account",
+          title: "Find Mentee",
+          to: "/findmentee",
         },
       ],
       miniVariant: false,

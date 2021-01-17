@@ -1,5 +1,12 @@
 <template>
   <v-container>
+    <v-container fill-height>
+      <v-row justify="center" align="center">
+        <v-col cols="12" sm="4">
+          <h1>Matched Mentors</h1>
+        </v-col>
+      </v-row>
+    </v-container>
     <v-col cols="20">
       <v-row rows="8">
         <v-card
@@ -88,8 +95,12 @@ export default {
     loading(id) {
       this.index = id;
     },
-    setMentor(id) {
+    async setMentor(id) {
+      const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
       console.log(id);
+      await sleep(1000);
+      this.$alert("Successfully Paired", "Success", "success");
     },
   },
 };
