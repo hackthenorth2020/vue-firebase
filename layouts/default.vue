@@ -135,6 +135,11 @@ export default {
           title: "Items",
           to: "/items",
         },
+        {
+          icon: "mdi-account",
+          title: "User Profile",
+          to: "/userprofile",
+        },
       ],
       miniVariant: false,
       right: true,
