@@ -128,6 +128,11 @@ export default {
           title: "User Profile",
           to: "/userprofile",
         },
+        {
+          icon: "mdi-account",
+          title: "Find Mentor",
+          to: "/findmentor",
+        },
       ],
       miniVariant: false,
       right: true,
