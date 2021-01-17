@@ -12,7 +12,7 @@
         outlined
         @click="loginUser()"
       >
-        Login
+        Submit
       </v-btn>
     </v-card>
   </div>
@@ -22,7 +22,7 @@
 export default {
   methods: {
     loginUser() {
-      this.$alert("Successfully Paired", "Success", "success").then(() => {
+      this.$alert("Successfully Sent", "Success", "success").then(() => {
         this.$router.push("/dashboard");
       });
     },
