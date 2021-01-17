@@ -173,7 +173,7 @@
           class="ma-6"
           color="success"
           icon="mdi-store"
-          title="Revenue"
+          title="Donations"
           value="$ 4,245"
           sub-icon="mdi-calendar"
           sub-text="Last 24 Hours"
@@ -185,7 +185,7 @@
           class="ma-6"
           color="orange"
           icon="mdi-sofa"
-          title="Bookings"
+          title="Reserved Calls"
           value="184"
           sub-icon="mdi-alert"
           sub-icon-color="red"
@@ -222,16 +222,16 @@
                 >Tasks:</span
               >
               <v-tab class="mr-3">
-                <v-icon class="mr-2"> mdi-bug </v-icon>
-                Bugs
+                <v-icon class="mr-2"> mdi-alert-circle-outline </v-icon>
+                Concerns
               </v-tab>
               <v-tab class="mr-3">
                 <v-icon class="mr-2"> mdi-code-tags </v-icon>
-                Website
+                Mentees
               </v-tab>
               <v-tab>
                 <v-icon class="mr-2"> mdi-cloud </v-icon>
-                Server
+                Network
               </v-tab>
             </v-tabs>
           </template>
