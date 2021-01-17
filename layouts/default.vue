@@ -49,13 +49,12 @@
         <v-icon>mdi-minus</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title" />
-      <!-- <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn> -->
+
+      <div class="flex-grow-1"></div>
+
+      <v-btn class="ml-2" min-width="0" text to="/userprofile">
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container fluid>
@@ -144,7 +143,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Vuetify.js HTN Template",
+      title: "Mntr",
     };
   },
 };
