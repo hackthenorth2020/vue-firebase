@@ -100,7 +100,9 @@ export default {
 
       console.log(id);
       await sleep(1000);
-      this.$alert("Successfully Paired", "Success", "success");
+      this.$alert("Successfully Paired", "Success", "success").then(() => {
+        this.$router.push("/pairing");
+      });
     },
   },
 };

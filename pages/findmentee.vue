@@ -91,7 +91,7 @@ export default {
           "Senior in high school, looking to attend YorkU for Computer Science.",
         src:
           "https://images.pexels.com/photos/2826131/pexels-photo-2826131.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        id: 87,
+        id: 123,
       },
     ],
   }),
@@ -104,7 +104,9 @@ export default {
 
       console.log(id);
       await sleep(1000);
-      this.$alert("Successfully Paired", "Success", "success");
+      this.$alert("Successfully Paired", "Success", "success").then(() => {
+        this.$router.push("/pairing");
+      });
     },
   },
 };

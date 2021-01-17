@@ -37,12 +37,38 @@
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
-      <v-toolbar-title v-text="title" />
-
+      <v-img
+        @click="goHome()"
+        :src="require('@/assets/logo.png')"
+        contain
+        width="110px"
+        height="110px"
+      />
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
       <div class="flex-grow-1"></div>
 
       <v-btn class="ml-2" min-width="0" text to="/userprofile">
         <v-icon>mdi-account</v-icon>
+      </v-btn>
+      <v-btn class="ml-2" min-width="0" text to="/dashboard">
+        <v-icon>mdi-tablet-dashboard</v-icon>
       </v-btn>
     </v-app-bar>
     <v-main>
@@ -83,11 +109,6 @@ export default {
       drawer: false,
       fixed: false,
       items: [
-        {
-          icon: "mdi-apps",
-          title: "Welcome",
-          to: "/",
-        },
         {
           icon: "mdi-account",
           title: "Sign in",
@@ -134,6 +155,11 @@ export default {
       rightDrawer: false,
       title: "Mntr",
     };
+  },
+  methods: {
+    goHome() {
+      this.$router.push("/");
+    },
   },
 };
 </script>
