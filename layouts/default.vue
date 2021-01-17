@@ -36,26 +36,40 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
+
+      <v-img
+        @click="goHome()"
+        :src="require('@/assets/logo.png')"
+        contain
+        width="110px"
+        height="110px"
+      />
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
+
+      <v-btn class="ml-2" min-width="0" text to="/userprofile">
+        <v-icon>mdi-account</v-icon>
       </v-btn>
-      <!-- <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn> -->
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
+      <v-btn class="ml-2" min-width="0" text to="/dashboard">
+        <v-icon>mdi-tablet-dashboard</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
-      <!-- <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn> -->
     </v-app-bar>
     <v-main>
       <v-container fluid>
@@ -96,16 +110,6 @@ export default {
       fixed: false,
       items: [
         {
-          icon: "mdi-apps",
-          title: "Welcome",
-          to: "/",
-        },
-        {
-          icon: "mdi-chart-bubble",
-          title: "Inspire",
-          to: "/inspire",
-        },
-        {
           icon: "mdi-account",
           title: "Sign in",
           to: "/signin",
@@ -114,11 +118,6 @@ export default {
           icon: "mdi-account",
           title: "Sign up",
           to: "/signup",
-        },
-        {
-          icon: "mdi-airplane-landing",
-          title: "Landing Page",
-          to: "/landingpage",
         },
         {
           icon: "mdi-account",
@@ -135,12 +134,32 @@ export default {
           title: "Items",
           to: "/items",
         },
+        {
+          icon: "mdi-account",
+          title: "User Profile",
+          to: "/userprofile",
+        },
+        {
+          icon: "mdi-account",
+          title: "Find Mentor",
+          to: "/findmentor",
+        },
+        {
+          icon: "mdi-account",
+          title: "Find Mentee",
+          to: "/findmentee",
+        },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Vuetify.js HTN Template",
+      title: "Mntr",
     };
+  },
+  methods: {
+    goHome() {
+      this.$router.push("/");
+    },
   },
 };
 </script>

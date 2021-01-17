@@ -61,7 +61,7 @@ export default {
       {
         icon: "mdi-email",
         title: "Email",
-        text: "baseDev@test.com<br>basedDev@test.com",
+        text: "support@mntr.tech<br>support@mntr.tech",
       },
     ],
   }),

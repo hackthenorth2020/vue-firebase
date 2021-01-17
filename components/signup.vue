@@ -10,6 +10,8 @@
           label="Email"
           placeholder="example@example.com"
           :rules="[rules.required, rules.email]"
+          outlined
+          prepend-inner-icon="mdi-email"
         />
         <v-text-field
           v-model="password"
@@ -19,6 +21,8 @@
           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
+          outlined
+          prepend-inner-icon="mdi-lock-outline"
         />
         <v-text-field
           v-model="passwordConfirm"
@@ -28,8 +32,10 @@
           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
+          outlined
+          prepend-inner-icon="mdi-lock-outline"
         />
-        <v-btn :disabled="!validInfo()" @click="signUpUser()" large block>
+        <v-btn :disabled="!validInfo()" @click="signUpUser()" large block outlined class="blue--text">
           Sign Up
         </v-btn>
       </v-form>

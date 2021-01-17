@@ -13,14 +13,16 @@
 
               <base-business-contact dense />
             </v-col>
-
+<!--
             <v-col cols="12" md="3">
               <info-features />
             </v-col>
+            -->
 
-            <v-col cols="12" md="3">
+<!--<v-col cols="12" md="3">
               <instagram />
             </v-col>
+            -->
           </v-row>
         </v-container>
       </v-responsive>
@@ -29,8 +31,8 @@
 </template>
 
 <script>
-import InfoFeatuers from "@/components/landingpage/InfoFeatures";
-import Instagram from "@/components/landingpage/Instagram";
+//import InfoFeatuers from "@/components/landingpage/InfoFeatures";
+//import Instagram from "@/components/landingpage/Instagram";
 import BaseSection from "@/components/landingpage/base/Section";
 import BaseBusinessContact from "@/components/landingpage/base/BusinessContact";
 import BaseInfo from "@/components/landingpage/base/Info";
@@ -40,8 +42,8 @@ export default {
   name: "SectionBusinessInfo",
 
   components: {
-    InfoFeatuers,
-    Instagram,
+   //InfoFeatuers,
+    //Instagram,
     BaseSection,
     BaseBusinessContact,
     BaseInfo,

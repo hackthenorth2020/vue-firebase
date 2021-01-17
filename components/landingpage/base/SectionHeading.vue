@@ -70,6 +70,7 @@ export default {
     text: String,
     title: String,
   },
+  
 
   computed: {
     classes() {

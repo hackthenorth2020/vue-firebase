@@ -9,6 +9,8 @@
           :rules="[rules.required, rules.email]"
           v-model="email"
           label="Email"
+          outlined
+          prepend-inner-icon="mdi-email"
         />
         <v-text-field
           :rules="[rules.required, rules.counter]"
@@ -19,8 +21,10 @@
           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
+          outlined
+          prepend-inner-icon="mdi-lock-outline"
         />
-        <v-btn primary large block class="px-4" @click="loginUser()">
+        <v-btn primary large block class="px-4, blue--text" outlined  @click="loginUser()">
           Login
         </v-btn>
       </v-form>
