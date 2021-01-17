@@ -1,8 +1,8 @@
 <template>
   <v-container class="ma-6">
-    <v-card class="pa-6">
+    <v-card class="pa-6" outlined>
       <v-card-title class="justify-center">
-        <h5>Sign Up</h5>
+        <h3>Sign Up</h3>
       </v-card-title>
       <v-form>
         <v-text-field
@@ -10,6 +10,8 @@
           label="Email"
           placeholder="example@example.com"
           :rules="[rules.required, rules.email]"
+          prepend-inner-icon="mdi-email"
+          outlined
         />
         <v-text-field
           v-model="password"
@@ -19,6 +21,8 @@
           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
+          prepend-inner-icon="mdi-lock-outline"
+          outlined
         />
         <v-text-field
           v-model="passwordConfirm"
@@ -28,8 +32,10 @@
           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
+          prepend-inner-icon="mdi-lock-outline"
+          outlined
         />
-        <v-btn :disabled="!validInfo()" @click="signUpUser()" large block>
+        <v-btn :disabled="!validInfo()"  rounded color="lightblue" class="blue--text" outlined @click="signUpUser()" large block>
           Sign Up
         </v-btn>
       </v-form>
@@ -82,4 +88,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.v-btn,
+.pa-6{
+  border-color: #3a86ff;
+}
+.v-card {
+border-radius: 4px;
+}
+</style>

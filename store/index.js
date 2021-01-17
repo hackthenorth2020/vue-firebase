@@ -110,14 +110,11 @@ const mutations = {
 };
 
 
-const setters = {
-    //set posts
-}
+
      
 export {
     state,
     actions,
     mutations,
     getters,
-    setters,
 }

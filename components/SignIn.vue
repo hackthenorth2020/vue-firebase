@@ -1,16 +1,21 @@
 <template>
   <v-container class="ma-6">
-    <v-card class="pa-6">
+    <v-card class="pa-6" outlined>
       <v-card-title class="justify-center">
-        <h5>Login</h5>
+        <h3>Login</h3>
       </v-card-title>
       <v-form>
+        
         <v-text-field
           :rules="[rules.required, rules.email]"
           v-model="email"
           label="Email"
+          prepend-inner-icon="mdi-email"
+          outlined
         />
+        <v-divider></v-divider>
         <v-text-field
+        outlined
           :rules="[rules.required, rules.counter]"
           counter
           minlength="6"
@@ -19,8 +24,10 @@
           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
           :type="show ? 'text' : 'password'"
           @click:append="show = !show"
+          prepend-inner-icon="mdi-lock-outline"
         />
-        <v-btn primary large block class="px-4" @click="loginUser()">
+      
+        <v-btn primary large block  rounded color="lightblue" class="blue--text" outlined @click="loginUser()">
           Login
         </v-btn>
       </v-form>
@@ -63,4 +70,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.v-btn,
+.v-card {
+border-radius: 4px;
+}
+
+
+</style>
